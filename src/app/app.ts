@@ -6,14 +6,20 @@ import {Tasks} from './tasks/tasks';
 @Component({
   imports: [HeaderComponent, User, Tasks],
   selector: 'app-root',
-  styleUrl: './app.css',
+  styleUrl: 'app.css',
   templateUrl: './app.html',
 
 })
 export class App {
   users = DUMMY_USERS;
+selectedUserId?: string;
+
+
+get SelectedUser(){
+  return this.users.find(user=>user.id===this.selectedUserId)!;
+}
 
   onSelectUser(id: string){
-    console.log(`selected user with ${id}`);
+   this.selectedUserId=id;
   }
 }
