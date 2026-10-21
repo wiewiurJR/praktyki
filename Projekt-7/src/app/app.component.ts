@@ -20,6 +20,11 @@ export class AppComponent implements OnInit {
       console.log('New value....');
       subscriber.next({timesExecuted});
       timesExecuted++;
+  if(timesExecuted>5){
+      subscriber.complete();
+      return;
+  }
+
 
     },1000)
   });
