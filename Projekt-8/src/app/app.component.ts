@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { AvailablePlacesComponent } from './places/available-places/available-places.component';
-import { UserPlacesComponent } from './places/user-places/user-places.component';
+import {AvailablePlacesComponent} from './places/available-places/available-places.component';
+import {UserPlacesComponent} from './places/user-places/user-places.component';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,6 @@ import { UserPlacesComponent } from './places/user-places/user-places.component'
   styleUrl: './app.component.css',
   imports: [AvailablePlacesComponent, UserPlacesComponent],
 })
-export class AppComponent {}
+export class AppComponent {
+
+}
